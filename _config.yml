@@ -1,0 +1,43 @@
+# Site settings
+title: Alex Villegas
+description: 'Soy Ingeniero en Telecomunicaciones, conectividad y redes. y un entusiasta de la ciberseguridad, Mi objetivo es documentar el proceso de aprendizaje, compartir conocimientos con la comunidad y crear un espacio donde otros también puedan inspirarse, aprender o simplemente disfrutar del viaje a través del mundo de la ciberseguridad y la tecnología.'
+url: 'http://joshgerdes.com/jekyll-uno'
+baseurl: ''
+google_analytics: 'G-QCM7NR1541'
+# disqus_shortname: 'your-disqus-name'
+# disable_landing_page: true
+
+author:
+  name: 'Alex Villegas'
+  email: contacto@alexvillegas.cl
+  hackthebox_username: indiopicaro
+  github_username:  Indiopicaro
+  linkedin_username:  alex-villegas-saldano
+
+defaults:
+  -
+    scope:
+      path: ''
+      type: 'posts'
+    values:
+        layout: 'post'
+
+# Build settings
+destination: _site
+paginate: 10
+permalink: /:year/:title/
+markdown: kramdown
+highlighter: rouge
+
+sass:
+    sass_dir: _sass
+    style: compressed
+
+kramdown:
+  # use Github Flavored Markdown
+  input: GFM
+  # do not replace newlines by <br>s
+  hard_wrap: false
+
+plugins: ['jekyll-paginate']
+exclude: ['README.md', 'Gemfile', 'Gemfile.lock', 'screenshot.png']

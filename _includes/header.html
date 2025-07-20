@@ -1,0 +1,197 @@
+<span class="mobile btn-mobile-menu">
+  <i class="icon icon-list btn-mobile-menu__icon"></i>
+  <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+</span>
+
+<header class="panel-cover {% if site.disable_landing_page %}panel-cover--collapsed{% endif %}"
+  style="background-image: url({{ site.baseurl }}/images/cover.jpg)">
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+      <div class="panel-main__content">
+        <a href="{{ site.baseurl }}/" title="link to home of {{ site.title }}">
+          <img src="{{ site.baseurl }}/images/profile.jpg" class="user-image" alt="My Profile Photo">
+          <h1 class="panel-cover__title panel-title">{{ site.title }}</h1>
+        </a>
+        <hr class="panel-cover__divider">
+        <p class="panel-cover__description">{{ site.description }}</p>
+        
+        <!-- Certificaciones -->
+        <div class="certifications">
+          <img src="{{ site.baseurl }}/images/certificaciones/introduction-to-cybersecurity.png" alt="Introduction to Cybersecurity" title="Introduction to Cybersecurity" class="certification-badge" data-certification="intro-cybersecurity">
+          <img src="{{ site.baseurl }}/images/certificaciones/cybersecurity-essentials.png" alt="Cybersecurity Essentials" title="Cybersecurity Essentials" class="certification-badge" data-certification="cybersecurity-essentials">
+          <img src="{{ site.baseurl }}/images/certificaciones/ethical-hacker.png" alt="Ethical Hacker" title="Ethical Hacker" class="certification-badge" data-certification="ethical-hacker">
+          <div class="certification-more" title="4 certificaciones más" id="show-all-certifications">
+            <span class="certification-more-text">+4</span>
+          </div>
+        </div>
+        
+        <!-- Modal para todas las certificaciones -->
+        <div id="certifications-modal" class="certifications-modal">
+          <div class="certifications-modal-content">
+            <div class="certifications-modal-header">
+              <h3>Todas mis certificaciones</h3>
+              <span class="certifications-modal-close" id="close-certifications-modal">&times;</span>
+            </div>
+            <div class="certifications-modal-body">
+              <div class="certification-item" data-certification="intro-cybersecurity">
+                <img src="{{ site.baseurl }}/images/certificaciones/introduction-to-cybersecurity.png" alt="Introduction to Cybersecurity" title="Introduction to Cybersecurity" class="certification-badge-modal">
+                <div class="certification-info">
+                  <h4>Introduction to Cybersecurity</h4>
+                  <p>Cisco Networking Academy</p>
+                </div>
+              </div>
+              <div class="certification-item" data-certification="cybersecurity-essentials">
+                <img src="{{ site.baseurl }}/images/certificaciones/cybersecurity-essentials.png" alt="Cybersecurity Essentials" title="Cybersecurity Essentials" class="certification-badge-modal">
+                <div class="certification-info">
+                  <h4>Cybersecurity Essentials</h4>
+                  <p>Cisco Networking Academy</p>
+                </div>
+              </div>
+              <div class="certification-item" data-certification="ethical-hacker">
+                <img src="{{ site.baseurl }}/images/certificaciones/ethical-hacker.png" alt="Ethical Hacker" title="Ethical Hacker" class="certification-badge-modal">
+                <div class="certification-info">
+                  <h4>Ethical Hacker</h4>
+                  <p>Cisco Networking Academy</p>
+                </div>
+              </div>
+              <div class="certification-item" data-certification="python-essentials">
+                <img src="{{ site.baseurl }}/images/certificaciones/python-essentials-1.1.png" alt="Python Essentials 1" title="Python Essentials 1.1" class="certification-badge-modal">
+                <div class="certification-info">
+                  <h4>Python Essentials 1</h4>
+                  <p>Cisco Networking Academy</p>
+                </div>
+              </div>
+              <div class="certification-item" data-certification="junior-analyst">
+                <img src="{{ site.baseurl }}/images/certificaciones/junior-cybersecurity-analyst-career-path.1.png" alt="Junior Cybersecurity Analyst Career Path" title="Junior Cybersecurity Analyst Career Path" class="certification-badge-modal">
+                <div class="certification-info">
+                  <h4>Junior Cybersecurity Analyst Career Path</h4>
+                  <p>Cisco Networking Academy</p>
+                </div>
+              </div>
+              <div class="certification-item" data-certification="cyber-threat-management">
+                <img src="{{ site.baseurl }}/images/certificaciones/cyber-threat-management.png" alt="Cyber Threat Management" title="Cyber Threat Management" class="certification-badge-modal">
+                <div class="certification-info">
+                  <h4>Cyber Threat Management</h4>
+                  <p>Cisco Networking Academy</p>
+                </div>
+              </div>
+              <div class="certification-item" data-certification="introduction-to-iot">
+                <img src="{{ site.baseurl }}/images/certificaciones/introduction-to-iot.png" alt="Introduction to IoT" title="Introduction to IoT" class="certification-badge-modal">
+                <div class="certification-info">
+                  <h4>Introduction to IoT</h4>
+                  <p>Cisco Networking Academy</p>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Modal para descripción de certificación -->
+            <div id="certification-detail-modal" class="certification-detail-modal">
+              <div class="certification-detail-content">
+                <div class="certification-detail-header">
+                  <h3 id="detail-title">Título de la Certificación</h3>
+                  <span class="certification-detail-close" id="close-detail-modal">&times;</span>
+                </div>
+                <div class="certification-detail-body">
+                  <div class="certification-detail-image">
+                    <img id="detail-image" src="" alt="" class="certification-badge-detail">
+                  </div>
+                  <div class="certification-detail-info">
+                    <div class="certification-detail-section">
+                      <h4>Descripción</h4>
+                      <p id="detail-description"></p>
+                    </div>
+                    <div class="certification-detail-section">
+                      <h4>Organización</h4>
+                      <p id="detail-organization"></p>
+                    </div>
+                    <div class="certification-detail-section">
+                      <h4>Habilidades Adquiridas</h4>
+                      <ul id="detail-skills"></ul>
+                    </div>
+                    <div class="certification-detail-section">
+                      <h4>Fecha de Obtención</h4>
+                      <p id="detail-date"></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <hr class="panel-cover__divider panel-cover__divider--secondary">
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+              <li class="navigation__item"><a href="https://blog.alexvillegas.cl" title="link to blog"
+                  class="external-blog-button" target="_blank">Blog</a></li>
+              <li class="navigation__item"><a href="{{ site.baseurl }}/contact/" title="link to contact form"
+                  class="contact-button">Contáctame</a></li>
+            </ul>
+          </nav>
+
+          <nav class="cover-navigation navigation--social">
+            <ul class="navigation">
+
+              {% if site.author.hackthebox_username %}
+              <!-- Hack The Box -->
+              <li class="navigation__item">
+                <a href="https://app.hackthebox.com/profile/{{ site.author.hackthebox_username }}"
+                  title="{{ site.author.hackthebox_username }} on Hack The Box" target="_blank">
+                  <i class="icon icon-social-hacker-news"></i>
+                  <span class="label">Hack The Box</span>
+                </a>
+              </li>
+              {% endif %}
+
+              {% if site.author.linkedin_username %}
+              <!-- LinkedIn -->
+              <li class="navigation__item">
+                <a href="https://www.linkedin.com/in/{{ site.author.linkedin_username }}"
+                  title="{{ site.author.linkedin_username }} on LinkedIn" target="_blank">
+                  <i class="icon icon-social-linkedin"></i>
+                  <span class="label">LinkedIn</span>
+                </a>
+              </li>
+              {% endif %}
+
+              {% if site.author.github_username %}
+              <!-- GitHub -->
+              <li class="navigation__item">
+                <a href="https://www.github.com/{{ site.author.github_username }}"
+                  title="{{ site.author.github_username }} on GitHub" target="_blank">
+                  <i class="icon icon-social-github"></i>
+                  <span class="label">GitHub</span>
+                </a>
+              </li>
+              {% endif %}
+
+              {% if site.author.email %}
+              <!-- Email -->
+              <li class="navigation__item">
+                <a href="mailto:{{ site.author.email }}" title="Email {{ site.author.email }}" target="_blank">
+                  <i class="icon icon-mail"></i>
+                  <span class="label">Email</span>
+                </a>
+              </li>
+              {% endif %}
+
+
+
+            </ul>
+          </nav>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+<script src="{{ site.baseurl }}/js/certification-tooltips.js"></script>
