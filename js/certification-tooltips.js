@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Script para tooltips de certificaciones y modal
 document.addEventListener('DOMContentLoaded', function() {
   const modal = document.getElementById('certifications-modal');
@@ -301,13 +300,11 @@ document.addEventListener('DOMContentLoaded', function() {
   // Tooltips para todas las insignias
   const allBadges = document.querySelectorAll('.certification-badge, .certification-badge-modal');
   allBadges.forEach(function(badge) {
-=======
 // Script para tooltips de certificaciones
 document.addEventListener('DOMContentLoaded', function() {
   const certificationBadges = document.querySelectorAll('.certification-badge');
   
   certificationBadges.forEach(function(badge) {
->>>>>>> e757d3bd551de7e4d763ccb09713b746ff1d3b66
     const tooltipText = badge.getAttribute('title') || badge.getAttribute('alt');
     
     // Crear el tooltip
@@ -338,7 +335,6 @@ document.addEventListener('DOMContentLoaded', function() {
       arrow.style.visibility = 'hidden';
     });
   });
-<<<<<<< HEAD
   
   // Tooltips para el cuadrado "+X"
   const certificationMore = document.querySelectorAll('.certification-more');
@@ -373,6 +369,4 @@ document.addEventListener('DOMContentLoaded', function() {
       arrow.style.visibility = 'hidden';
     });
   });
-=======
->>>>>>> e757d3bd551de7e4d763ccb09713b746ff1d3b66
 }); 
