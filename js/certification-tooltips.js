@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Script para tooltips de certificaciones y modal
 document.addEventListener('DOMContentLoaded', function() {
   const modal = document.getElementById('certifications-modal');
@@ -86,13 +85,13 @@ document.addEventListener('DOMContentLoaded', function() {
       title: 'Cyber Threat Management',
       image: '/images/certificaciones/cyber-threat-management.png',
       organization: 'Cisco Networking Academy',
-      description: 'Certificación especializada en la gestión y respuesta a amenazas cibernéticas. Desarrolla habilidades para identificar, analizar y mitigar diferentes tipos de amenazas digitales, incluyendo malware, phishing y ataques avanzados.',
+      description: 'Certificación especializada en la gestión y respuesta a amenazas cibernéticas. Aprende técnicas avanzadas de detección, análisis y mitigación de amenazas, así como estrategias de respuesta a incidentes de seguridad.',
       skills: [
-        'Identificación de amenazas cibernéticas',
-        'Análisis de malware y ataques',
-        'Gestión de incidentes de seguridad',
-        'Técnicas de mitigación de amenazas',
-        'Respuesta a incidentes cibernéticos'
+        'Gestión de amenazas cibernéticas',
+        'Detección avanzada de amenazas',
+        'Análisis de comportamiento malicioso',
+        'Estrategias de mitigación',
+        'Respuesta a incidentes de seguridad'
       ],
       date: '2025'
     },
@@ -100,13 +99,13 @@ document.addEventListener('DOMContentLoaded', function() {
       title: 'Introduction to IoT',
       image: '/images/certificaciones/introduction-to-iot.png',
       organization: 'Cisco Networking Academy',
-      description: 'Certificación que introduce los fundamentos del Internet de las Cosas (IoT). Cubre conceptos básicos de dispositivos conectados, protocolos de comunicación, seguridad IoT y aplicaciones prácticas en diferentes industrias.',
+      description: 'Certificación que introduce los fundamentos del Internet de las Cosas (IoT). Cubre conceptos básicos de conectividad, sensores, actuadores y las tecnologías que permiten la comunicación entre dispositivos inteligentes.',
       skills: [
         'Fundamentos de IoT',
-        'Protocolos de comunicación IoT',
-        'Seguridad en dispositivos IoT',
-        'Arquitectura de sistemas IoT',
-        'Aplicaciones industriales de IoT'
+        'Conectividad de dispositivos',
+        'Sensores y actuadores',
+        'Protocolos de comunicación',
+        'Seguridad en dispositivos IoT'
       ],
       date: '2022'
     }
@@ -301,13 +300,6 @@ document.addEventListener('DOMContentLoaded', function() {
   // Tooltips para todas las insignias
   const allBadges = document.querySelectorAll('.certification-badge, .certification-badge-modal');
   allBadges.forEach(function(badge) {
-=======
-// Script para tooltips de certificaciones
-document.addEventListener('DOMContentLoaded', function() {
-  const certificationBadges = document.querySelectorAll('.certification-badge');
-  
-  certificationBadges.forEach(function(badge) {
->>>>>>> e757d3bd551de7e4d763ccb09713b746ff1d3b66
     const tooltipText = badge.getAttribute('title') || badge.getAttribute('alt');
     
     // Crear el tooltip
@@ -338,7 +330,6 @@ document.addEventListener('DOMContentLoaded', function() {
       arrow.style.visibility = 'hidden';
     });
   });
-<<<<<<< HEAD
   
   // Tooltips para el cuadrado "+X"
   const certificationMore = document.querySelectorAll('.certification-more');
@@ -373,6 +364,4 @@ document.addEventListener('DOMContentLoaded', function() {
       arrow.style.visibility = 'hidden';
     });
   });
-=======
->>>>>>> e757d3bd551de7e4d763ccb09713b746ff1d3b66
 }); 
